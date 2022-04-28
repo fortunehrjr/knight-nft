@@ -12,8 +12,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 3em;
-  /* animation: drop 0.8s ease-in-out 1.03s forwards;
-  opacity: 0; */
+  animation: drop 0.8s ease-in-out 1.03s forwards;
+  opacity: 0;
 }
 .logo {
   scale: 0.8;
@@ -97,8 +97,8 @@ section {
 }
 .text-section {
   padding: 5rem 5rem;
-  /* opacity: 0;
-  animation: slide 1s ease-in-out 0.1s forwards; */
+  opacity: 0;
+  animation: slide 1s ease-in-out 0.1s forwards;
 }
 .text-btn {
   padding: 10px 15px;
@@ -261,7 +261,6 @@ span {
   section {
     height: 100vh;
     width: 100%;
-    background: green;
   }
   .header {
     font-family: "Poppins";
@@ -279,7 +278,6 @@ span {
   section {
     height: 100vh;
     width: 100%;
-    background: rgb(128, 0, 0);
   }
   .header {
     font-family: "Poppins";
@@ -300,7 +298,6 @@ span {
   section {
     height: 100vh;
     width: 100%;
-    background: rgb(0, 59, 252);
   }
   .header {
     font-family: "Poppins";
@@ -318,7 +315,6 @@ span {
   section {
     height: 100vh;
     width: 100%;
-    background: rgb(252, 0, 197);
   }
   .nft {
     height: 450px;
@@ -329,7 +325,6 @@ span {
   section {
     height: 100vh;
     width: 100%;
-    background: rgb(252, 235, 0);
   }
   .header {
     font-family: "Poppins";
