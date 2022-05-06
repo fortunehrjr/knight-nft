@@ -3,7 +3,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
-const eye = document.querySelector(".fa-eye-slash");
+const eye = document.querySelector(".fa-eye");
 const eye2 = document.querySelector("#eye-two");
 
 /* show password event listeners*/
