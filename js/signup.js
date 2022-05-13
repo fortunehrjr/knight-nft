@@ -5,6 +5,7 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 const eye = document.querySelector(".fa-eye");
 const eye2 = document.querySelector("#eye-two");
+const greet = document.querySelector("#welcome");
 
 /* show password event listeners*/
 eye.addEventListener("click", () => {
@@ -79,7 +80,8 @@ function checkInputs() {
     (email.parentElement.className === "form-control success") &
     (password2.parentElement.className === "form-control success")
   ) {
-    window.location.href = "./fff.html";
+    window.location.href = "./home.html";
+    greet.innerText = `Hello, ${username}`;
   }
 }
 
