@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.sec-1 {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, #24243e 0%, #302b63 55.21%, #0f0c29 100%);
+}
+/* nav styling */
+nav {
+  height: 8vh;
+  border-bottom: 1px solid #5cc4e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3em;
+}
+.logo {
+  scale: 0.8;
+  cursor: pointer;
+}
+.links {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+  padding-right: 20px;
+  transition: all ease-in 200ms;
+}
+.onpage {
+  color: rgb(0, 255, 255);
+}
+.links:hover {
+  color: rgb(0, 255, 255);
+}
+.right-side {
+  display: flex;
+}
+.logout-btn {
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  background: #5352ed;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 20px;
+}
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.226);
+}
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.hamburger .line {
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: white;
+  margin-block: 8px;
+  border-radius: 4px;
+  transition: transform 0.5s ease, opacity 0.25s ease;
+}
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(13px);
+  rotate: 45deg;
+}
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-16px);
+  rotate: -45deg;
+}
+/* body styling */
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+.pic {
+  height: 800px;
+  pointer-events: none;
+}
+.left {
+  height: 92vh;
+  width: 50%;
+  padding: 3rem 7rem;
+}
+.right {
+  height: 92vh;
+}
+.left h2 {
+  color: white;
+  font-size: 3rem;
+  font-family: poppins, "poppins", sans-serif;
+  padding-bottom: 2rem;
+}
+.left h3 {
+  font-size: 1.6rem;
+  color: white;
+  font-family: poppins, "poppins", sans-serif;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+.form {
+  margin-top: 1rem;
+  width: 80%;
+  height: 2 00px;
+}
+input {
+  width: 100%;
+  height: 2.5rem;
+  font-family: poppins, "poppins", sans-serif;
+  padding: 0.3rem;
+  margin-bottom: 1.3rem;
+  margin-top: 0.3rem;
+}
+.submit {
+  margin-top: 1rem;
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  background: #5352ed;
+  width: 110px;
+  height: 32px;
+  border: none;
+}
+label {
+  font-size: 1rem;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+.pic {
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

@@ -6,6 +6,7 @@ const password2 = document.getElementById("password2");
 const eye = document.querySelector(".fa-eye");
 const eye2 = document.querySelector("#eye-two");
 const greet = document.querySelector("#welcome");
+const logout = document.querySelector(".logout-btn");
 
 /* show password event listeners*/
 eye.addEventListener("click", () => {
@@ -81,7 +82,6 @@ function checkInputs() {
     (password2.parentElement.className === "form-control success")
   ) {
     window.location.href = "./home.html";
-    greet.innerText = `Hello, ${username}`;
   }
 }
 
