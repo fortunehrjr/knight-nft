@@ -16,6 +16,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 3em;
+  opacity: 0;
+  animation: drop 0.8s ease-in-out 800ms forwards;
 }
 .logo {
   scale: 0.8;
@@ -96,6 +98,7 @@ nav {
 .left {
   height: 92vh;
   padding: 3rem 4rem;
+  animation: fade 1.58s ease-in-out forwards;
 }
 .right {
   height: 92vh;
@@ -148,12 +151,15 @@ nav {
   border-radius: 30px;
   transition: background 400ms ease-in-out;
   text-align: center;
+  transition: all 300ms ease;
+}
+.card:hover {
+  margin-top: -5rem;
 }
 .card h2 {
   font-family: poppins, "poppins", sans-serif;
   margin-top: 2rem;
   font-size: 1.3rem;
-
   text-transform: capitalize;
 }
 .card-pic {
@@ -395,5 +401,23 @@ nav {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(-8vh);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

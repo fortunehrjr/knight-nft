@@ -1,13 +1,20 @@
-const card = document.querySelectorAll(".card");
-const cardPic = document.querySelectorAll(".card-pic");
+const cards = document.querySelectorAll(".card");
+const cardPics = document.querySelectorAll(".card-pic");
 
-cardPic.style = "background: red;";
-card.onmouseover = function () {
-  cardPic.style = "scale: 1.12";
-};
+cards.forEach((card) => {
+  card.onmouseover = function () {
+    card.childNodes.forEach((node) => {
+      if (node.className === "card-pic") {
+        node.style = "scale: 1.2";
+      }
+    });
+  };
 
-card.onmouseout = function () {
-  cardPic.style = "scale: 1";
-};
-
-console.log(card);
+  card.onmouseout = function () {
+    card.childNodes.forEach((node) => {
+      if (node.className === "card-pic") {
+        node.style = "scale: 1";
+      }
+    });
+  };
+});
