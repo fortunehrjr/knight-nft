@@ -16,20 +16,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/explore.css" />
-    <title>Home</title>
+    <title>Knight Explore Page</title>
   </head>
   <body>
     <section class="sec-1">
       <nav>
         <a href="./home.html">
           <div class="left-side">
-            <img src="/images/KNIGHT.png" class="logo" /></div
+            <img src="../images/KNIGHT.png" class="logo" /></div
         ></a>
         <!-- -->
         <div class="right-side">
           <a href="./home.html" class="links">Home</a>
           <a href="./explore.html" class="links onpage">Explore</a>
-          <a href="#" class="links">Stats</a>
+          <a href="stats.html" class="links">Stats</a>
           <a href="#" class="links">Help</a>
           <a href="./index.html">
             <button class="logout-btn">
@@ -44,14 +44,19 @@
         </button>
       </nav>
 
-      <div class="container">
+      <form class="container">
         <input
           type="text"
-          placeholder="Search for keywords e.g Abstract, Cartoon, Animals e.t.c"
+          class="search-input"
+          placeholder="Search for Movies "
         />
-      </div>
+        <button class="submit">submit</button>
+      </form>
 
-      <div class="box-side"></div>
+      <div class="box"></div>
+      <button class="more">More</button>
     </section>
+
+    <script src="../js/explore.js"></script>
   </body>
 </html>
