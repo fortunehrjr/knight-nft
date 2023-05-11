@@ -1,8 +1,12 @@
 const api_key = "d3dd0919c6a0e1773b53df7979248d90";
-
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".container");
 const box = document.querySelector(".box");
+let modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close");
+
 let searchValue;
 let pageno = 1;
 
@@ -43,6 +47,31 @@ async function initialImages() {
     rateCheck();
 
     box.appendChild(movieImg);
+    // initial modal
+    movieImg.addEventListener("click", () => {
+      modal.style.display = "block";
+      modal.innerHTML = `
+      <div class="modal-content">
+          
+
+        <img src=${
+          "https://image.tmdb.org/t/p/w500" + result.poster_path
+        } class="modal-pic"></img>
+
+        <div class="text-section">
+          <h2>${result.original_title || result.name}</h2>
+          <p class="movie-des">${result.overview}</p>
+          <h4 class="release-date">Release Date -${result.release_date}</h4>
+          <p class="rate" style="color:black">${result.vote_average}</p>
+        </div>
+        <span class="close">&times;</span>
+      </div>`;
+      const close = document.querySelector(".close");
+
+      close.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+    });
   });
 }
 
@@ -72,6 +101,32 @@ async function searchMovies(query) {
     rateCheck();
 
     box.appendChild(movieImg);
+
+    // search modal
+    movieImg.addEventListener("click", () => {
+      modal.style.display = "block";
+      modal.innerHTML = `
+      <div class="modal-content">
+          
+
+        <img src=${
+          "https://image.tmdb.org/t/p/w500" + result.poster_path
+        } class="modal-pic"></img>
+
+        <div class="text-section">
+          <h2>${result.original_title || result.name}</h2>
+          <p class="movie-des">${result.overview}</p>
+          <h4 class="release-date">Release Date -${result.release_date}</h4>
+          <p class="rate" style="color:black">${result.vote_average}</p>
+        </div>
+        <span class="close">&times;</span>
+      </div>`;
+      const close = document.querySelector(".close");
+
+      close.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+    });
   });
 }
 

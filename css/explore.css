@@ -19,6 +19,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 3em;
+  opacity: 0;
+  animation: drop 0.8s ease-in-out 800ms forwards;
 }
 .logo {
   scale: 0.8;
@@ -94,6 +96,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  animation: fade 1.58s ease-in-out forwards;
 }
 .container input {
   width: 50%;
@@ -135,6 +138,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .movie-img h3 {
@@ -159,4 +163,84 @@ nav {
 
 .box img {
   height: 500px;
+}
+
+/* modal style  */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /*Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #e5e5e5;
+  margin: 3% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+  display: flex;
+}
+
+/* The Close Button */
+.close {
+  color: #ff0000;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 2;
+  scale: 1.7;
+  padding-right: 1rem;
+  margin-top: 16%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-pic {
+  scale: 0.7;
+}
+.text-section {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  font-family: poppins;
+}
+.text-section h2 {
+  font-size: 3rem;
+}
+.text-section p {
+  font-size: 1.2rem;
+  padding: 1rem 1rem 1rem 0;
+}
+.text-section h4 {
+  font-size: 1.3rem;
+}
+/* keyframes */
+
+@keyframes drop {
+  from {
+    transform: translateY(-8vh);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
